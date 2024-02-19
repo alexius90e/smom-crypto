@@ -1,3 +1,106 @@
 .header {
+  padding: 9px 0 0;
 
+  & .container {
+    position: relative;
+  }
+
+  &__title {
+    margin: 0 auto 20px;
+    font-size: 136px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 110%;
+    text-align: center;
+
+    @include desktop {
+      max-width: 860px;
+      font-size: 100px;
+      line-height: 120%;
+    }
+
+    @include laptop {
+      max-width: 768px;
+      font-size: 96px;
+      line-height: 130%;
+    }
+
+    @include tablet {
+      margin: 0 auto 30px;
+      font-size: 72px;
+      line-height: normal;
+    }
+
+    @include mobile {
+      font-size: 64px;
+    }
+
+    @include mobile {
+      font-size: 48px;
+    }
+  }
+
+  &__tagline {
+    margin: 0;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+
+    @include laptop {
+      margin: 0 0 60px;
+    }
+
+    @include mobile {
+      font-size: 24px;
+    }
+  }
+
+  &__social {
+    position: absolute;
+    top: 68px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    @include laptop {
+      position: static;
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    &-link {
+      display: inline-block;
+      width: 70px;
+      height: 70px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      transition: transform ease-in-out 0.1s;
+      will-change: transform;
+
+      @include tablet {
+        width: 56px;
+        height: 56px;
+      }
+
+      &:hover {
+        transform: scale(1.08);
+      }
+
+      &:active {
+        transform: scale(1);
+      }
+
+      &_x {
+        background-image: url(../assets/twitter.svg);
+      }
+
+      &_tg {
+        background-image: url(../assets/telegram.svg);
+      }
+    }
+  }
 }

@@ -36,3 +36,110 @@ figure {
   padding: 0 20px;
   box-sizing: border-box;
 }
+
+.header {
+  padding: 9px 0 0;
+}
+.header .container {
+  position: relative;
+}
+.header__title {
+  margin: 0 auto 20px;
+  font-size: 136px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 110%;
+  text-align: center;
+}
+@media (max-width: 1400px) {
+  .header__title {
+    max-width: 860px;
+    font-size: 100px;
+    line-height: 120%;
+  }
+}
+@media (max-width: 1024px) {
+  .header__title {
+    max-width: 768px;
+    font-size: 96px;
+    line-height: 130%;
+  }
+}
+@media (max-width: 768px) {
+  .header__title {
+    margin: 0 auto 30px;
+    font-size: 72px;
+    line-height: normal;
+  }
+}
+@media (max-width: 576px) {
+  .header__title {
+    font-size: 64px;
+  }
+}
+@media (max-width: 576px) {
+  .header__title {
+    font-size: 48px;
+  }
+}
+.header__tagline {
+  margin: 0;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+}
+@media (max-width: 1024px) {
+  .header__tagline {
+    margin: 0 0 60px;
+  }
+}
+@media (max-width: 576px) {
+  .header__tagline {
+    font-size: 24px;
+  }
+}
+.header__social {
+  position: absolute;
+  top: 68px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+@media (max-width: 1024px) {
+  .header__social {
+    position: static;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+.header__social-link {
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  transition: transform ease-in-out 0.1s;
+  will-change: transform;
+}
+@media (max-width: 768px) {
+  .header__social-link {
+    width: 56px;
+    height: 56px;
+  }
+}
+.header__social-link:hover {
+  transform: scale(1.08);
+}
+.header__social-link:active {
+  transform: scale(1);
+}
+.header__social-link_x {
+  background-image: url(../assets/twitter.svg);
+}
+.header__social-link_tg {
+  background-image: url(../assets/telegram.svg);
+}
