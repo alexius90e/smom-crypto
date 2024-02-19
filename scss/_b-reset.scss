@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Pathway+Extreme:opsz,wght@8..144,100..900&display=swap');
+
+html {
+  color: $white;
+  font-size: 1rem;
+  font-family: 'Pathway Extreme', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  background-color: $black;
+}
+
+a,
+button,
+input,
+textarea {
+  font-family: 'Pathway Extreme', sans-serif;
+}
+
+a {
+  color: $white;
+  text-decoration: none;
+}
+
+figure {
+  margin: 0;
+}
