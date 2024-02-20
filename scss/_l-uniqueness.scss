@@ -1,10 +1,10 @@
-.introducing {
+.uniqueness {
   padding-bottom: 48px;
   color: $white;
 
   & .container {
     display: flex;
-    align-items: flex-end;
+    align-items: flex-start;
     gap: 20px;
 
     @include desktop {
@@ -55,6 +55,15 @@
       }
     }
 
+    &_main {
+      margin: 48px 0 0;
+
+      @include laptop {
+        margin: 20px 0 0;
+      }
+  
+    }
+
     &_left &-image,
     &_right &-image {
       height: 100%;
@@ -80,14 +89,13 @@
   }
 
   &__title {
-    margin: 48px 0 0;
+    margin: 0;
     font-size: 30px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
 
     @include laptop {
-      margin: 20px 0 0;
       font-size: 24px;
     }
 
