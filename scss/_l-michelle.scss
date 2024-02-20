@@ -1,0 +1,33 @@
+.michelle {
+  padding: 0 0 48px;
+
+  &__figure {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 8px;
+
+    @include laptop {
+      margin: 0 -20px;
+      border-radius: 0;
+    }
+
+    &-image {
+      display: block;
+      width: 1360px;
+
+      @include laptop {
+        width: 1080px;
+      }
+
+      @include tablet {
+        width: 960px;
+      }
+
+      @include mobile {
+        width: 768px;
+      }
+    }
+  }
+}

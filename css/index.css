@@ -572,3 +572,39 @@ figure {
     font-size: 12px;
   }
 }
+
+.michelle {
+  padding: 0 0 48px;
+}
+.michelle__figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 8px;
+}
+@media (max-width: 1024px) {
+  .michelle__figure {
+    margin: 0 -20px;
+    border-radius: 0;
+  }
+}
+.michelle__figure-image {
+  display: block;
+  width: 1360px;
+}
+@media (max-width: 1024px) {
+  .michelle__figure-image {
+    width: 1080px;
+  }
+}
+@media (max-width: 768px) {
+  .michelle__figure-image {
+    width: 960px;
+  }
+}
+@media (max-width: 576px) {
+  .michelle__figure-image {
+    width: 768px;
+  }
+}
