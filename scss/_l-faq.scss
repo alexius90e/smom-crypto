@@ -1,4 +1,6 @@
 .faq {
+  position: relative;
+  z-index: 2;
   padding: 48px 0;
 
   &__figure {

@@ -149,6 +149,130 @@ figure {
   background-image: url(../assets/telegram.svg);
 }
 
+.footer {
+  position: relative;
+  z-index: 1;
+  padding: 152px 0 394px;
+}
+@media (max-width: 1024px) {
+  .footer {
+    padding: 120px 0 300px;
+  }
+}
+@media (max-width: 768px) {
+  .footer {
+    padding: 120px 0 240px;
+  }
+}
+.footer::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  display: block;
+  width: 1367px;
+  height: 2685px;
+  background: url(../assets/firstscreen-bg.png) left center no-repeat;
+  mix-blend-mode: hard-light;
+  opacity: 0.1;
+}
+.footer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  display: block;
+  background: url(../assets/michelle-footer.png) center top no-repeat;
+}
+@media (max-width: 1024px) {
+  .footer::after {
+    background-position: right -600px top;
+    background-size: 1920px;
+  }
+}
+@media (max-width: 768px) {
+  .footer::after {
+    background-position: right -500px top;
+    background-size: 1600px;
+  }
+}
+@media (max-width: 576px) {
+  .footer::after {
+    background-size: 1400px;
+  }
+}
+.footer .container {
+  position: relative;
+  z-index: 3;
+}
+.footer__wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.footer__wrapper > * {
+  max-width: 440px;
+}
+.footer__text {
+  margin: 0 0 16px;
+  color: #ffffff;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-shadow: 0 0 8px #030d14;
+}
+@media (max-width: 768px) {
+  .footer__text {
+    margin: 0 0 16px;
+    font-size: 24px;
+  }
+}
+@media (max-width: 576px) {
+  .footer__text {
+    margin: 0 0 18px;
+    color: #ffffff;
+    font-size: 18px;
+  }
+}
+.footer__button {
+  display: block;
+  width: 100%;
+  margin: 134px 0 0;
+  padding: 32px;
+  color: #ffffff;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  border: 3px solid #69CF8B;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.03);
+  transition: all ease-in-out 0.15s;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .footer__button {
+    padding: 24px;
+    font-size: 24px;
+  }
+}
+@media (max-width: 576px) {
+  .footer__button {
+    padding: 20px;
+    font-size: 20px;
+  }
+}
+.footer__button:hover {
+  background-color: rgba(105, 207, 139, 0.2);
+}
+.footer__button:active {
+  background-color: rgba(105, 207, 139, 0.1);
+}
+
 .wallets {
   position: relative;
   padding-top: 716px;
@@ -610,6 +734,8 @@ figure {
 }
 
 .faq {
+  position: relative;
+  z-index: 2;
   padding: 48px 0;
 }
 .faq__figure {

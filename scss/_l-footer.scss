@@ -1,2 +1,124 @@
 .footer {
+  position: relative;
+  z-index: 1;
+  padding: 152px 0 394px;
+
+  @include laptop {
+    padding: 120px 0 300px;
+  }
+
+  @include tablet {
+    padding: 120px 0 240px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    display: block;
+    width: 1367px;
+    height: 2685px;
+    background: url(../assets/firstscreen-bg.png) left center no-repeat;
+    mix-blend-mode: hard-light;
+    opacity: 0.1;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    display: block;
+    background: url(../assets/michelle-footer.png) center top no-repeat;
+
+
+    @include laptop {
+      background-position: right -600px top;
+      background-size: 1920px;
+    }
+
+    @include tablet {
+      background-position: right -500px top;
+      background-size: 1600px;
+    }
+
+    @include mobile {
+      background-size: 1400px;
+    }
+  }
+
+  & .container {
+    position: relative;
+    z-index: 3;
+  }
+
+  &__wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+
+    & > * {
+      max-width: 440px;
+    }
+  }
+
+  &__text {
+    margin: 0 0 16px;
+    color: $white;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-shadow: 0 0 8px $black;
+
+    @include tablet {
+      margin: 0 0 16px;
+      font-size: 24px;
+    }
+
+    @include mobile {
+      margin: 0 0 18px;
+      color: $white;
+      font-size: 18px;
+    }
+  }
+
+  &__button {
+    display: block;
+    width: 100%;
+    margin: 134px 0 0;
+    padding: 32px;
+    color: $white;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    border: 3px solid $green;
+    border-radius: 15px;
+    background-color: rgba($color: $white, $alpha: 0.03);
+    transition: $baseTransition;
+    cursor: pointer;
+
+    @include tablet {
+      padding: 24px;
+      font-size: 24px;
+    }
+
+    @include mobile {
+      padding: 20px;
+      font-size: 20px;
+    }
+
+    &:hover {
+      background-color: rgba($color: $green, $alpha: 0.2);
+    }
+
+    &:active {
+      background-color: rgba($color: $green, $alpha: 0.1);
+    }
+  }
 }
