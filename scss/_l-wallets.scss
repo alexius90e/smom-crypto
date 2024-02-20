@@ -69,13 +69,13 @@
     }
 
     &:hover {
-      border-color: rgba($color: $white, $alpha: 0.15);
+      border-color: rgba($color: $white, $alpha: 0.2);
       background-color: rgba($color: $white, $alpha: 0.1);
     }
 
     &:active {
-      border-color: rgba($color: $white, $alpha: 0.2);
-      background-color: rgba($color: $white, $alpha: 0.14);
+      border-color: rgba($color: $white, $alpha: 0.15);
+      background-color: rgba($color: $white, $alpha: 0.07);
     }
 
     &:last-child {
@@ -92,15 +92,15 @@
     }
 
     &.active {
-      border-color: rgba($color: $green, $alpha: 0.3);
-      background-color: rgba($color: $green, $alpha: 0.05);
+      border-color: rgba($color: $green, $alpha: 0.9);
+      background-color: rgba($color: $green, $alpha: 0.1);
 
       &::before {
         content: 'copied to clipboard';
         position: absolute;
         top: 12px;
         right: 17px;
-        color: rgba($color: $green, $alpha: 0.75);
+        color: rgba($color: $green, $alpha: 1);
         font-size: 14px;
         font-style: normal;
         font-weight: 400;
@@ -115,7 +115,7 @@
       }
 
       &:hover {
-        background-color: rgba($color: $green, $alpha: 0.1);
+        background-color: rgba($color: $green, $alpha: 0.2);
       }
 
       &:active {

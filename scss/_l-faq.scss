@@ -1,0 +1,128 @@
+.faq {
+  padding: 48px 0;
+
+  &__figure {
+    margin: 0 0 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-image {
+      display: block;
+      width: 70px;
+    }
+  }
+
+  &__title {
+    margin: 0 0 36px;
+    color: $white;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: center;
+
+    @include tablet {
+      margin: 0 0 28px;
+      font-size: 24px;
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 1015px;
+    margin: 0 auto;
+  }
+
+  &__item {
+    padding: 34px 24px;
+    color: $white;
+    border-radius: 16px;
+    border: 1px solid rgba(36, 36, 36, 0.05);
+    background-color: rgba(255, 255, 255, 0.02);
+
+    @include tablet {
+      padding: 28px 24px;
+      border-radius: 8px;
+    }
+
+    @include mobile {
+      padding: 24px 20px;
+    }
+
+    &-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+
+      @include tablet {
+        font-size: 20px;
+      }
+
+      @include mobile {
+        font-size: 14px;
+      }
+
+      &::after {
+        content: '';
+        display: block;
+        width: 36px;
+        height: 36px;
+        background: url(../assets/arrow-down.svg) center no-repeat;
+        background-size: 100%;
+        transition: transform ease-in-out 0.14s;
+
+        @include tablet {
+          width: 30px;
+          height: 30px;
+        }
+
+        @include mobile {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+
+    &.active &-question::after {
+      transform: rotate(-180deg);
+    }
+
+    &-answer {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      max-height: 0;
+      box-sizing: border-box;
+      overflow: hidden;
+      font-variant-numeric: lining-nums proportional-nums;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      transition: max-height 0.2s ease-out;
+      opacity: 0.85;
+
+      @include tablet {
+        gap: 20px;
+        font-size: 14px;
+      }
+
+      @include mobile {
+        gap: 14px;
+        font-size: 12px;
+      }
+
+      &::before {
+        content: '';
+      }
+    }
+  }
+}
