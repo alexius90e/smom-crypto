@@ -50,6 +50,7 @@
   }
 
   &__item {
+    position: relative;
     display: flex;
     gap: 18px;
     max-width: fit-content;
@@ -72,8 +73,8 @@
     }
 
     &:active {
-      border-color: rgba($color: $white, $alpha: 0.3);
-      background-color: rgba($color: $white, $alpha: 0.2);
+      border-color: rgba($color: $white, $alpha: 0.2);
+      background-color: rgba($color: $white, $alpha: 0.14);
     }
 
     &:last-child {
@@ -90,13 +91,42 @@
     }
 
     &.active {
-      border-color: rgba($color: #66ff00, $alpha: 0.3);
+      border-color: rgba($color: $green, $alpha: 0.3);
+      background-color: rgba($color: $green, $alpha: 0.05);
+
+      &::before {
+        content: 'copied to clipboard';
+        position: absolute;
+        top: 12px;
+        right: 17px;
+        color: rgba($color: $green, $alpha: 0.4);
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        user-select: none;
+
+        @include tablet {
+          top: 6px;
+          right: 12px;
+          font-size: 10px;
+        }
+      }
+
+      &:hover {
+        background-color: rgba($color: $green, $alpha: 0.1);
+      }
+
+      &:active {
+        background-color: rgba($color: $green, $alpha: 0.14);
+      }
     }
 
     &-figure {
       flex: 0 0 auto;
       width: 70px;
       height: 70px;
+      user-select: none;
 
       @include tablet {
         width: 48px;

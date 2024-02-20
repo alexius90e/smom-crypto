@@ -11,7 +11,7 @@ html {
 body {
   position: relative;
   margin: 0;
-  background-color: #030D14;
+  background-color: #030d14;
 }
 
 a,
@@ -203,6 +203,7 @@ figure {
   transform: translateX(-50%);
 }
 .wallets__item {
+  position: relative;
   display: flex;
   gap: 18px;
   max-width: -moz-fit-content;
@@ -226,8 +227,8 @@ figure {
   background-color: rgba(255, 255, 255, 0.1);
 }
 .wallets__item:active {
-  border-color: rgba(255, 255, 255, 0.3);
-  background-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.14);
 }
 .wallets__item:last-child {
   margin-bottom: 0;
@@ -241,11 +242,42 @@ figure {
 }
 .wallets__item.active {
   border-color: rgba(102, 255, 0, 0.3);
+  background-color: rgba(102, 255, 0, 0.05);
+}
+.wallets__item.active::before {
+  content: "copied to clipboard";
+  position: absolute;
+  top: 12px;
+  right: 17px;
+  color: rgba(102, 255, 0, 0.4);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+}
+@media (max-width: 768px) {
+  .wallets__item.active::before {
+    top: 6px;
+    right: 12px;
+    font-size: 10px;
+  }
+}
+.wallets__item.active:hover {
+  background-color: rgba(102, 255, 0, 0.1);
+}
+.wallets__item.active:active {
+  background-color: rgba(102, 255, 0, 0.14);
 }
 .wallets__item-figure {
   flex: 0 0 auto;
   width: 70px;
   height: 70px;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
 }
 @media (max-width: 768px) {
   .wallets__item-figure {
