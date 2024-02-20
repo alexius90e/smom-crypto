@@ -1,1 +1,1 @@
-'safaff';
+import './wallets.js';

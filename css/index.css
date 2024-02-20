@@ -38,7 +38,12 @@ figure {
 }
 
 .header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   padding: 9px 0 0;
+  z-index: 5;
 }
 .header .container {
   position: relative;
@@ -142,4 +147,150 @@ figure {
 }
 .header__social-link_tg {
   background-image: url(../assets/telegram.svg);
+}
+
+.wallets {
+  position: relative;
+  padding-top: 716px;
+}
+@media (max-width: 768px) {
+  .wallets {
+    padding-top: 560px;
+  }
+}
+@media (max-width: 576px) {
+  .wallets {
+    padding-top: 500px;
+  }
+}
+.wallets::before {
+  content: "";
+  position: absolute;
+  top: 122px;
+  left: 50%;
+  z-index: -2;
+  max-width: 100%;
+  width: 934px;
+  height: 934px;
+  background: url(../assets/michelle-head.svg) center no-repeat;
+  background-size: 934px;
+  transform: translateX(-50%);
+  mix-blend-mode: overlay;
+}
+@media (max-width: 768px) {
+  .wallets::before {
+    background-size: 600px;
+    background-position: top center;
+  }
+}
+@media (max-width: 576px) {
+  .wallets::before {
+    background-size: 400px;
+    background-position: top 100px center;
+  }
+}
+.wallets::after {
+  content: "";
+  position: absolute;
+  top: -362px;
+  left: 50%;
+  z-index: -1;
+  max-width: 100%;
+  width: 1582px;
+  height: 2685px;
+  background: url(../assets/firstscreen-bg.png) center no-repeat;
+  background-size: 1582px;
+  transform: translateX(-50%);
+}
+.wallets__item {
+  display: flex;
+  gap: 18px;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  margin-bottom: 24px;
+  padding: 18px 17px;
+  border-radius: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.07);
+  background-color: rgba(255, 255, 255, 0.02);
+  transition: all ease-in-out 0.1s;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .wallets__item {
+    gap: 12px;
+    padding: 8px 12px;
+  }
+}
+.wallets__item:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.wallets__item:active {
+  border-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.wallets__item:last-child {
+  margin-bottom: 0;
+}
+.wallets__item:nth-child(odd) {
+  border-top-left-radius: 4px;
+}
+.wallets__item:nth-child(even) {
+  margin-left: auto;
+  border-top-right-radius: 4px;
+}
+.wallets__item.active {
+  border-color: rgba(102, 255, 0, 0.3);
+}
+.wallets__item-figure {
+  flex: 0 0 auto;
+  width: 70px;
+  height: 70px;
+}
+@media (max-width: 768px) {
+  .wallets__item-figure {
+    width: 48px;
+    height: 48px;
+  }
+}
+.wallets__item-figure-image {
+  display: block;
+  max-width: 100%;
+}
+.wallets__item-text {
+  color: #ffffff;
+}
+.wallets__item-name {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30px;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+}
+@media (max-width: 768px) {
+  .wallets__item-name {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+.wallets__item-contract {
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+  word-break: break-word;
+}
+@media (max-width: 768px) {
+  .wallets__item-contract {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+@media (max-width: 576px) {
+  .wallets__item-contract {
+    font-size: 14px;
+    line-height: 18px;
+  }
 }

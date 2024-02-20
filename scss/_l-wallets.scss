@@ -1,0 +1,147 @@
+.wallets {
+  position: relative;
+  padding-top: 716px;
+
+  @include tablet {
+    padding-top: 560px;
+  }
+
+  @include mobile {
+    padding-top: 500px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 122px;
+    left: 50%;
+    z-index: -2;
+    max-width: 100%;
+    width: 934px;
+    height: 934px;
+    background: url(../assets/michelle-head.svg) center no-repeat;
+    background-size: 934px;
+    transform: translateX(-50%);
+    mix-blend-mode: overlay;
+
+    @include tablet {
+      background-size: 600px;
+      background-position: top center;
+    }
+
+    @include mobile {
+      background-size: 400px;
+      background-position: top 100px center;
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: -362px;
+    left: 50%;
+    z-index: -1;
+    max-width: 100%;
+    width: 1582px;
+    height: 2685px;
+    background: url(../assets/firstscreen-bg.png) center no-repeat;
+    background-size: 1582px;
+    transform: translateX(-50%);
+  }
+
+  &__item {
+    display: flex;
+    gap: 18px;
+    max-width: fit-content;
+    margin-bottom: 24px;
+    padding: 18px 17px;
+    border-radius: 12px;
+    border: 2px solid rgba($color: $white, $alpha: 0.07);
+    background-color: rgba($color: $white, $alpha: 0.02);
+    transition: all ease-in-out 0.1s;
+    cursor: pointer;
+
+    @include tablet {
+      gap: 12px;
+      padding: 8px 12px;
+    }
+
+    &:hover {
+      border-color: rgba($color: $white, $alpha: 0.15);
+      background-color: rgba($color: $white, $alpha: 0.1);
+    }
+
+    &:active {
+      border-color: rgba($color: $white, $alpha: 0.3);
+      background-color: rgba($color: $white, $alpha: 0.2);
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:nth-child(odd) {
+      border-top-left-radius: 4px;
+    }
+
+    &:nth-child(even) {
+      margin-left: auto;
+      border-top-right-radius: 4px;
+    }
+
+    &.active {
+      border-color: rgba($color: #66ff00, $alpha: 0.3);
+    }
+
+    &-figure {
+      flex: 0 0 auto;
+      width: 70px;
+      height: 70px;
+
+      @include tablet {
+        width: 48px;
+        height: 48px;
+      }
+
+      &-image {
+        display: block;
+        max-width: 100%;
+      }
+    }
+
+    &-text {
+      color: $white;
+    }
+
+    &-name {
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 30px;
+      user-select: none;
+
+      @include tablet {
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+
+    &-contract {
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 40px;
+      word-break: break-word;
+
+      @include tablet {
+        font-size: 20px;
+        line-height: 28px;
+      }
+
+      @include mobile {
+        font-size: 14px;
+        line-height: 18px;
+      }
+    }
+  }
+}
