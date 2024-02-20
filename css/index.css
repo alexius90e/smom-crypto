@@ -152,6 +152,7 @@ figure {
 .wallets {
   position: relative;
   padding-top: 716px;
+  padding-bottom: 48px;
 }
 @media (max-width: 768px) {
   .wallets {
@@ -324,5 +325,124 @@ figure {
   .wallets__item-contract {
     font-size: 14px;
     line-height: 18px;
+  }
+}
+
+.introducing {
+  padding-bottom: 48px;
+  color: #ffffff;
+}
+.introducing .container {
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+}
+@media (max-width: 1400px) {
+  .introducing .container {
+    align-items: center;
+  }
+}
+@media (max-width: 1024px) {
+  .introducing .container {
+    gap: 12px;
+  }
+}
+@media (max-width: 576px) {
+  .introducing .container {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+.introducing__figure {
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 8px;
+}
+@media (max-width: 576px) {
+  .introducing__figure {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    max-height: 420px;
+    max-width: 400px;
+  }
+}
+.introducing__figure_left, .introducing__figure_right {
+  flex: 0 0 calc(33.3333333333% - 13.3333333333px);
+  height: 756px;
+}
+@media (max-width: 1024px) {
+  .introducing__figure_left, .introducing__figure_right {
+    flex: 0 0 calc(33.3333333333% - 8px);
+    height: 480px;
+  }
+}
+@media (max-width: 768px) {
+  .introducing__figure_left, .introducing__figure_right {
+    height: 400px;
+  }
+}
+@media (max-width: 576px) {
+  .introducing__figure_left, .introducing__figure_right {
+    flex: 0 1 auto;
+    order: 1;
+    height: auto;
+  }
+}
+.introducing__figure_left .introducing__figure-image, .introducing__figure_right .introducing__figure-image {
+  height: 100%;
+  object-fit: cover;
+}
+.introducing__figure-image {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+.introducing__main {
+  flex: 0 0 calc(33.3333333333% - 8px);
+}
+@media (max-width: 576px) {
+  .introducing__main {
+    order: 0;
+    flex: 0 1 auto;
+    max-width: 400px;
+  }
+}
+.introducing__title {
+  margin: 48px 0 0;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+@media (max-width: 1024px) {
+  .introducing__title {
+    margin: 20px 0 0;
+    font-size: 24px;
+  }
+}
+@media (max-width: 768px) {
+  .introducing__title {
+    font-size: 20px;
+  }
+}
+.introducing__text {
+  margin: 18px 0 0;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}
+@media (max-width: 1024px) {
+  .introducing__text {
+    margin: 14px 0 0;
+    font-size: 14px;
+  }
+}
+@media (max-width: 768px) {
+  .introducing__text {
+    margin: 12px 0 0;
+    font-size: 12px;
   }
 }
